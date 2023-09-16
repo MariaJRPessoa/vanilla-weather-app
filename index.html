@@ -21,21 +21,43 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  placeholder="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
           <h1 id="city"></h1>
           <div class="row">
             <div class="col">
-              <img src="" alt="" id="icon"> 
-                <strong id="temperature"></strong
-                ><span class="units"> °C |<a href="#">ºF</a></span>
-        
-                <div id="description"></div>
-              </ul>
+              <img src="" alt="" id="icon" />
+              <strong id="temperature"></strong
+              ><span class="units"> °C |<a href="#">ºF</a></span>
+              <div id="description"></div>
             </div>
             <div class="col">
               <ul class="specifics">
                 <li><small>Last updated on: </small><span id="date"></span></li>
-                <li class="humidity">Humidity: <strong><span id="humidity"></span>%</strong></li>
-                <li class="wind">Wind: <strong><span id="wind"></span>km/h</strong></li>
+                <li class="humidity">
+                  Humidity: <strong><span id="humidity"></span>%</strong>
+                </li>
+                <li class="wind">
+                  Wind: <strong><span id="wind"></span>km/h</strong>
+                </li>
               </ul>
             </div>
           </div>
