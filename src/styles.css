@@ -23,6 +23,7 @@ li {
   color: #878787;
   margin-top: 7.5px;
 }
+
 a {
   text-decoration: none;
 }
@@ -55,10 +56,11 @@ a {
 .specifics strong {
   color: palevioletred;
 }
-.description {
+#description {
   color: #878787;
+  text-transform: capitalize;
 }
-.icon {
+#icon {
   font-size: 60px;
   color: black;
   filter: drop-shadow(3px 5px 2px rgba(211, 209, 209, 0.753));
