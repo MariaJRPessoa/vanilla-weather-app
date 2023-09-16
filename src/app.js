@@ -1,4 +1,5 @@
 function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -35,9 +36,16 @@ function displayTemperature(response) {
   windElement.innerHTML = response.data.wind.speed;
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 let apiKey = "b34df24b3a92f0da2bte873o40353eff";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Amsterdam&key=${apiKey}`;
+let city = "Amsterdam";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
 axios.get(apiUrl).then(displayTemperature);
