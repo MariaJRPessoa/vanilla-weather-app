@@ -82,3 +82,13 @@ a {
   position: relative;
   top: 10px;
 }
+
+.weather-forecast {
+  margin-top: 25px;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 13px;
+}
+.temperature-forecast-minimum {
+  opacity: 0.6;
+}
