@@ -109,30 +109,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayFTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  cLink.classList.remove("active");
-  fLink.classList.add("active");
-  let fTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fTemperature);
-}
-
-function displayCTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  fLink.classList.remove("active");
-  cLink.classList.add("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 let celsiusTemperature = null;
-
-let fLink = document.querySelector("#fahrenheit-link");
-fLink.addEventListener("click", displayFTemperature);
-
-let cLink = document.querySelector("#celsius-link");
-cLink.addEventListener("click", displayCTemperature);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
